@@ -1,0 +1,503 @@
+@charset "UTF-8";
+/** @format */
+@keyframes showUp {
+  0% {
+    top: 100vh;
+    width: 0px;
+  }
+  50% {
+    top: 0vh;
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes upAndDown {
+  from {
+    top: 11.5vh;
+  }
+  to {
+    top: 12.5vh;
+  }
+}
+@keyframes flip {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+.flip {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.flip:hover {
+  transform: rotateX(-180deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes lengthen {
+  from {
+    width: 0%;
+  }
+  to {
+    width: -100%;
+  }
+}
+@keyframes lengthen2 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: -100%;
+  }
+}
+@keyframes longer {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes leftCloudGo {
+  from {
+    left: 65vh;
+  }
+  to {
+    left: -10vh;
+  }
+}
+@keyframes leftCloudBack {
+  from {
+    left: -10vh;
+  }
+  to {
+    left: 65vh;
+  }
+}
+@keyframes rightCloudGo {
+  from {
+    right: -55vh;
+  }
+  to {
+    right: -5vh;
+  }
+}
+@keyframes rightCloudBack {
+  from {
+    right: -5vh;
+  }
+  to {
+    right: -55vh;
+  }
+}
+@keyframes midCloudGo {
+  from {
+    right: -70vh;
+  }
+  to {
+    right: -10vw;
+  }
+}
+@keyframes midCloudBack {
+  from {
+    right: -10vw;
+  }
+  to {
+    right: 50vh;
+  }
+}
+@keyframes boatBack {
+  from {
+    left: 15vw;
+  }
+  to {
+    left: -35vh;
+  }
+}
+@keyframes boatGo {
+  from {
+    left: 65vh;
+  }
+  to {
+    left: 15vw;
+  }
+}
+@keyframes eurekaFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.eurekaFadeOut {
+  animation: eurekaFadeOut 0.8s ease-in-out;
+}
+
+.boatGo {
+  animation: boatGo 1.25s ease-out;
+}
+
+.boatBack {
+  animation: boatBack 1.25s ease-in;
+}
+
+.rightCloudGo {
+  animation: rightCloudGo 1.2s ease-out;
+}
+
+.rightCloudBack {
+  animation: rightCloudBack 1.2s ease-in;
+}
+
+.leftCloudGo {
+  animation: leftCloudGo 1s ease-out;
+}
+
+.leftCloudBack {
+  animation: leftCloudBack 1s ease-in;
+}
+
+.midCloudGo {
+  animation: midCloudGo 1.1s ease-out;
+}
+
+.midCloudBack {
+  animation: midCloudBack 1.1s ease-in;
+}
+
+.longer {
+  animation: longer 0.5s ease-in-out;
+}
+
+.lengthen {
+  animation: lengthen 0.5s ease-in-out;
+}
+
+.lengthen2 {
+  animation: lengthen2 0.5s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.fade-in2 {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-image: url("../imgs/背景.png");
+  background-size: cover;
+  display: flex;
+}
+body .result {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 3s ease-in-out;
+}
+body .result img {
+  position: relative;
+  transition: all 1s ease-in-out;
+  width: 41vh;
+  top: 5vh;
+  left: 0.5vw;
+}
+body main {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+body main div.eureka div.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main div.eureka div.title div.top {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+body main div.eureka div.title div.top .line {
+  width: 3.5rem;
+  height: 0;
+  border: rgba(27, 25, 20, 0.7) solid 1px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+body main div.eureka div.title div.top .rightLine {
+  animation-direction: alternate;
+}
+body main div.eureka div.title div.middle {
+  margin-top: 1rem;
+}
+body main div.eureka div.title div.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main div.eureka div.title div.bottom div.longLine {
+  width: 15rem;
+  height: 0;
+  border: rgba(18, 14, 5, 0.7) solid 1px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+body main div.eureka div.title div.bottom div.titleText {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+body main div.eureka div.title div.bottom div.titleText div {
+  font-family: "Noto Sans TC", arial;
+  font-size: 25px;
+  color: rgb(12, 10, 7);
+}
+body main div.eureka div.title div.bottom div.startBtn {
+  position: relative;
+  cursor: pointer;
+}
+body main div.eureka div.title div.bottom div.startBtn:hover {
+  transform: scale(1.2);
+}
+body main div.eureka div.title div.bottom div.startBtn div.startTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main div.eureka div.title div.bottom div.startBtn div.startTitle div.gameStart {
+  position: absolute;
+  transition: all 1s ease-in-out;
+  font-family: "Noto Sans TC", arial;
+  font-size: 15px;
+  color: rgb(19, 19, 0);
+}
+body main div.cloud {
+  display: flex;
+  position: relative;
+}
+body main div.cloud img.midCloud {
+  position: absolute;
+  top: 22vh;
+  right: -10vw;
+  z-index: 1;
+}
+body main div.cloud img.leftCloud {
+  position: absolute;
+  left: -15vh;
+  top: 10vh;
+  z-index: -1;
+}
+body main div.cloud img.boat {
+  position: absolute;
+  width:500px;
+  top: 10vh;
+  left: 15vw;
+}
+body main div.cloud img.rightCloud {
+  position: absolute;
+  right: -5vh;
+  top: 14vh;
+  z-index: 5;
+}
+body section.test {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section.test div.containerTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 4.5rem;
+}
+body section.test div.containerTop img.subTitle {
+  margin-bottom: 2rem;
+}
+body section.test div.containerTop div.progressBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+body section.test div.containerTop div.progressBar div.bar {
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+body section.test div.containerTop div.progressBar div.bar div.circle1 {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: rgb(109, 170, 159);
+  animation-play-state: paused;
+}
+body section.test div.containerTop div.progressBar div.bar div.progLine {
+  height: 1.5px;
+  width: 19rem;
+  border: 1.5px solid rgb(109, 170, 159);
+  margin-bottom: 20;
+}
+body section.test div.containerTop div.progressBar div.bar div.circle2 {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background-color: rgb(109, 170, 159);
+}
+body section.test div.containerTop div.progressBar img.wheel {
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  left: -13px;
+}
+body section.test div.containerBottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section.test div.containerBottom img.scale {
+  position: absolute;
+}
+body section.test div.containerBottom div.mainPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  height: 28.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.25rem;
+}
+body section.test div.containerBottom div.mainPart div.mainTop {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+body section.test div.containerBottom div.mainPart div.mainTop div.queNum {
+  display: flex;
+}
+body section.test div.containerBottom div.mainPart div.mainTop div.queNum h1 {
+  font-family: "Noto Sans TC", arial;
+  font-size: 1.5rem;
+  color: rgb(255, 171, 6);
+}
+body section.test div.containerBottom div.mainPart div.mainTop div.queLine {
+  left: -2rem;
+  height: 0;
+  transform-origin: left;
+  border: 1px solid rgb(255, 171, 6);
+  margin-bottom: 0.5rem;
+}
+body section.test div.containerBottom div.mainPart div.queText {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+body section.test div.containerBottom div.mainPart div.queText h1 {
+  font-weight: lighter;
+  padding-left: 0.4rem;
+  letter-spacing: 1px;
+  line-height: 27px;
+  font-size: 1rem;
+  overflow: hidden;
+  font-family: "Noto Sans TC", arial;
+  color: rgb(10, 9, 7);
+}
+body section.test div.containerBottom div.mainPart .choose {
+  transition: all 1s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body section.test div.containerBottom div.mainPart .choose .cho {
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+}
+body section.test div.containerBottom div.mainPart .choose .cho:hover {
+  cursor: pointer;
+  background-color: rgba(143, 138, 129, 0.8);
+  transform: scale(1.1);
+}
+body section.test div.containerBottom div.mainPart .choose .cho .eng {
+  width: 26px;
+  margin-right: 9px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+body section.test div.containerBottom div.mainPart .choose .cho .eng div {
+  position: absolute;
+  font-weight: lighter;
+  color: rgb(6, 5, 4);
+  font-family: "Noto Sans TC";
+  font-size: 12px;
+}
+body section.test div.containerBottom div.mainPart .choose .cho .eng div.border {
+  transition: all 2s ease-in-out;
+  height: 14px;
+  width: 26px;
+  border: 1px solid rgb(13, 12, 11);
+  text-align: center;
+  font-weight: lighter;
+  color: rgb(10, 9, 8);
+  font-size: 12px;
+}
+body section.test div.containerBottom div.mainPart .choose .cho .choText div {
+  width: 225px;
+  letter-spacing: 2px;
+  line-height: 16px;
+  font-weight: lighter;
+  color: rgb(5, 5, 5);
+  font-family: "Noto Sans TC";
+  font-size: 12px;
+}/*# sourceMappingURL=style.css.map */
